@@ -1,3 +1,6 @@
+import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
+import { Section } from './Section/Section';
+import { Statistics } from './Statistics/Statistics';
 export const App = () => {
   return (
     <div
@@ -7,10 +10,12 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
       }}
     >
-      React homework template
+      <Section />
+      <FeedbackOptions />
+      <Statistics />
     </div>
   );
 };
