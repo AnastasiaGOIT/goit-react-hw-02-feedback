@@ -1,4 +1,15 @@
-.container {
+.btn__list {
   display: flex;
   gap: 20px;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
 }
