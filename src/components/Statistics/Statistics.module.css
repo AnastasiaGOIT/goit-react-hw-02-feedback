@@ -1,3 +1,7 @@
 .statistic__list {
   list-style: none;
 }
+
+.statistic-item {
+  display: flex;
+}
