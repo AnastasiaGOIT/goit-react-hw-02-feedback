@@ -1,7 +1,25 @@
-.statistic__list {
-  list-style: none;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.statistic-item {
+.statistic__list {
+  list-style: none;
+  background-color: #d0c1c1;
+  padding: 20px;
+  border-radius: 7px;
+}
+
+.statistic__item {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.statistic__text {
+  margin-right: 20px;
+}
+.statistic__title {
+  text-align: center;
 }

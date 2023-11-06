@@ -10,27 +10,10 @@ export class App extends Component {
     neutral: 0,
     bad: 0,
   };
-
-  handleClickGood = () => {
+  onLeaveFeedback = type => {
     this.setState(prevState => {
       return {
-        good: prevState.good + 1,
-        // neutral: prevState.neutral + 1,
-        // bad: prevState.bad + 1,
-      };
-    });
-  };
-  handleClickNeutral = () => {
-    this.setState(prevState => {
-      return {
-        neutral: prevState.neutral + 1,
-      };
-    });
-  };
-  handleClickBad = () => {
-    this.setState(prevState => {
-      return {
-        bad: prevState.bad + 1,
+        [type]: prevState[type] + 1,
       };
     });
   };
@@ -66,11 +49,10 @@ export class App extends Component {
           color: '#010101',
         }}
       >
-        <Section title="" />
+        <Section />
         <FeedbackOptions
-          onGood={this.handleClickGood}
-          onNeutral={this.handleClickNeutral}
-          onBad={this.handleClickBad}
+          options={('good', 'neutral', 'bad')}
+          onLeaveFeedback={this.onLeaveFeedback}
         />
         {this.countTotalFeedback() === 0 ? (
           <Notification message="There is no feedback" />
