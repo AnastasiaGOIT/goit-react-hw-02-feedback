@@ -10,10 +10,10 @@ export class App extends Component {
     neutral: 0,
     bad: 0,
   };
-  onLeaveFeedback = type => {
+  onLeaveFeedback = option => {
     this.setState(prevState => {
       return {
-        [type]: prevState[type] + 1,
+        [option]: prevState[option] + 1,
       };
     });
   };
@@ -51,7 +51,7 @@ export class App extends Component {
       >
         <Section />
         <FeedbackOptions
-          options={('good', 'neutral', 'bad')}
+          options={['good', 'neutral', 'bad']}
           onLeaveFeedback={this.onLeaveFeedback}
         />
         {this.countTotalFeedback() === 0 ? (
